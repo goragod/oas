@@ -1,0 +1,7 @@
+# Kotchasan
+
+.gitignore
+.vscode
+robots.txt
+datas/
+settings/*

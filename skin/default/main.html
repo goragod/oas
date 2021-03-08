@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="table fullwidth">
+    <h2 class="td"><a href="index.php" id=logo title="{WEBTITLE}">{LOGO}</a></h2>
+    <div class="td right">
+      <div class="language-menu" data-text="{LANGUAGE}">
+        <ul>{LANGUAGES}</ul>
+      </div>
+      <span>
+        <a class="loginname" href="index.php?module=editprofile">{LOGINNAME}</a>
+      </span>
+    </div>
+  </div>
+  <div class="menu_wrapper">
+    <nav id=topmenu class="topmenu slidemenu">
+      <ul>{MENUS}</ul>
+    </nav>
+  </div>
+</header>
+<div id="skip" class="clear">
+  <main id="content">{CONTENT}</main>
+</div>
+<script>
+  $G(window).Ready(function() {
+    initWeb();
+  });
+</script>

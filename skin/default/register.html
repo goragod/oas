@@ -1,0 +1,45 @@
+<article id=login_div>
+  <h1>
+    <a href="{WEBURL}index.php" id=logo title="{WEBTITLE}">{LOGO}</a>
+  </h1>
+  <form id=register_frm method=post autocomplete=off action="{WEBURL}index.php">
+    <h2 class="table fullwidth">
+      <span class="td icon-register">{LNG_Register}</span>
+      <span class="td language-menu" data-text="{LANGUAGE}">
+        <ul>{LANGUAGES}</ul>
+      </span>
+    </h2>
+    <fieldset>
+      <p>
+        <label class="g-input icon-email">
+          <input type=text name=register_username id=register_username maxlength=50 title="{LNG_Email address used for login or request a new password}" placeholder="{LNG_Email}">
+        </label>
+      </p>
+      <p>
+        <label class="g-input icon-password">
+          <input type=password name=register_password id=register_password maxlength=20 title="{LNG_English lowercase letters and numbers not less than 6 characters}" placeholder="{LNG_Password}">
+        </label>
+      </p>
+      <p>
+        <label class="g-input icon-password">
+          <input type=password name=register_repassword id=register_repassword maxlength=20 title="{LNG_Enter password again Same as above}" placeholder="{LNG_Repassword}">
+        </label>
+      </p>
+      <p>
+        <label class="g-input icon-user">
+          <input type=text name=register_name id=register_name maxlength=100 title="{LNG_Name}" placeholder="{LNG_Name}">
+        </label>
+      </p>
+    </fieldset>
+    <fieldset>
+      <button type=submit class="button login wide" id="register_submit">{LNG_Register}</button>
+      <input type="hidden" name="token" id="token" value="{TOKEN}">
+    </fieldset>
+    <fieldset class="center">
+      {LOGINMENU}
+    </fieldset>
+  </form>
+  <script>
+    new GForm('register_frm', '{WEBURL}index.php/index/model/register/submit').onsubmit(doFormSubmit);
+  </script>
+</article>
